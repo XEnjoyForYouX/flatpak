@@ -272,7 +272,8 @@
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
                 "-DYUZU_USE_BUNDLED_FFMPEG=ON",
                 "-DBUILD_TAG=dev",
-                "-DBUILD_REPOSITORY=suyu-emu/suyu"
+                "-DBUILD_REPOSITORY=suyu-emu/suyu",
+								"-DEXTRA_LDFLAGS='-fuse-ld=mold'"
             ],
             "build-options": {
                 "env": {
