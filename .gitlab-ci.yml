@@ -1,4 +1,5 @@
 variables:
+  CPU_LIMIT: 8
   # Application id of the app, should be same as id used in flatpak manifest and MetaInfo
   APP_ID: org.suyu_emu.suyu
   # Location of the flatpak manifest, root of git repository
@@ -6,11 +7,11 @@ variables:
   # Name of flatpak bundle
   BUNDLE: "${APP_ID}.flatpak"
   # Docker image to use
-  DOCKER_REGISTRY: "docker.io/bilelmoussaoui/flatpak-github-actions"
+  DOCKER_REGISTRY: "git.nadeko.net/fijxu/flatpak-github-actions"
   # Runtime to use, https://github.com/flatpak/flatpak-github-actions#docker-image
   RUNTIME_NAME: "freedesktop"
   # Runtime version to use
-  RUNTIME_VRESION: "23.08"
+  RUNTIME_VRESION: "23.08-mold"
   DOCKER_IMAGE: ${DOCKER_REGISTRY}:${RUNTIME_NAME}-${RUNTIME_VRESION}
   SCHEDULE_TASK: default
 
